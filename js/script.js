@@ -1,14 +1,33 @@
-//"use strict"; 
-const cat = 'toys';
-console.log(`https://someirl.com/` );
+(function(){"use strict";}());
+let num = 20;
+function showFirstMessage(text)
+{
+    console.log(text);
+    let  num = 10;
+}
+showFirstMessage('hello');
+console.log(num);
 
-let incr = 10,
-    decr = 10;
-//++incr;
-//--decr;
-console.log(++incr);
-console.log(--decr);
+function calc(a, b)
+{
+    return(a+b);
+}
 
-const isCh = true,
-      isCl = true;
-console.log(isCh && isCl);
+console.log(calc(4,3));
+console.log(calc(5,6));
+//function declaration
+function ret()
+{
+    let num = 50;
+    return num;
+}
+
+const anotherNum = num;
+console.log(anotherNum);
+
+//function expression
+const logger = function()
+{console.log('Hello');};
+logger();
+
+const calc1 = (a,b) => {return a+b};
