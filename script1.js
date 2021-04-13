@@ -8,8 +8,8 @@ else
     console.log('False');
 } 
 
-const num = 50;
-/*
+/*const num = 50;
+
 if (num <49)
 {
     console.log('Error');
