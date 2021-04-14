@@ -1,33 +1,26 @@
-(function(){"use strict";}());
-let num = 20;
-function showFirstMessage(text)
-{
-    console.log(text);
-    let  num = 10;
-}
-showFirstMessage('hello');
-console.log(num);
+(function () {"use strict";}())
 
-function calc(a, b)
-{
-    return(a+b);
-}
+const str = "test";
+//console.log(str.length);
+const mas = [1, 2, 3];
+//console.log(mas.length);
+// console.log(str[2] = 'd');//так замены буквы в строке не произойдет, нужно исп-ть метод!
+console.log(str);
+console.log(str.toUpperCase()); 
+console.log(str.toLowerCase()); 
+const fruit  = "Some fruit";
+console.log(fruit.indexOf("fruit"));//поиск позиции
 
-console.log(calc(4,3));
-console.log(calc(5,6));
-//function declaration
-function ret()
-{
-    let num = 50;
-    return num;
-}
+const logg = "Hello world!";
+console.log(logg.slice(6,11));
+console.log(logg.slice(-5,-1));
 
-const anotherNum = num;
-console.log(anotherNum);
+console.log(logg.substring(6,11));
+console.log(logg.substr(6,2));
+//Методы для строк
+const num = 12.2;
+console.log(Math.round(num));
 
-//function expression
-const logger = function()
-{console.log('Hello');};
-logger();
-
-const calc1 = (a,b) => {return a+b};
+const test = "12.2px";
+console.log(parseInt(test));
+console.log(parseFloat(test));
