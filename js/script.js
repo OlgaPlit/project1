@@ -1,50 +1,39 @@
 (function () {"use strict";}());
+//массивы и псевдомассивы
+const arr = [1, 2, 3, 6, 8];
+/*
+//индекс при length
+arr[99] = 0;
+console.log(arr.length);
+console.log(arr);*/
+//arr.pop();
+/*
 
-const options = {
-    name: 'test',
-    width: 1024,
-    heigth: 1024,
-    colors:{//обЪект в обЪекте
-        border: 'black',
-        bg: 'red'
-    },
-    //создание метода в объекте
-    makeTest: function()
-        {console.log('Тест');}
-};
-//запуск метода в объекте
-options.makeTest();
-//деструктуризация объекта
-const {border, bg} = options.colors;
-console.log(border);
-//console.log(options.name);
-//console.log(options["colors"]["border"]);
-/*delete options.name;
-console.log(options);*/
-//перебор ключей в объекте
-for (let key in options)
+//добавление элеменат в конец массива
+arr.push(13);
+console.log(arr);
+
+//Перебор элементов массива через метод forEach и циклы
+arr.forEach(function(item, i, arr)
 {
-    console.log(`Свойство ${key}имеет значение ${options[key]}`);
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
+for (let i = 0; i<arr.length; i++)
+{console.log(arr[i]);}
+
+for (let value of arr)
+{
+    console.log(value);
 }
-
-/*let counter = 0;
-//Перебор всех свойств и ключей объектов
-for (let key in options)
+*/
+//формирование массива на соновании строки
+const str = prompt("","");
+const products = str.split(", ");
+//console.log(products);
+products.sort(compareNum);
+//callback функция по сравнению чисел
+function compareNum(a, b)
 {
-    if (typeof(options[key]) == 'object')
-    {for (let i in options[key])
-        {
-        console.log(`Свойство ${i}имеет значение ${options[key][i]}`);   
-        counter++; //кол-во вхождения в цикл будет равно числу св-в объекта
-        }
-    }
-    else  
-        {console.log(`Свойство ${key}имеет значение ${options[key]}`);
-        counter++; //кол-во вхождения в цикл будет равно числу св-в объекта
-        }
-   
-} 
-console.log(counter);*/ 
-
-console.log(Object.keys(options));
-console.log(Object.keys(options).length);
+    return a-b;
+}
+console.log(products.join("; "));
