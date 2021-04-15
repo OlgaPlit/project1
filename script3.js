@@ -24,3 +24,16 @@ console.log(Math.round(num));
 const test = "12.2px";
 console.log(parseInt(test));
 console.log(parseFloat(test));
+
+//callback-функции
+function learnJs(lang, callback)
+{
+    console.log(`я учу ${lang}`);
+    callback();
+}
+
+learnJs('Javascript', function()
+{
+    console.log('я всё');
+});
+
