@@ -1,34 +1,33 @@
 (function () {"use strict";}());
+//dynamic tipization
+//1.string
+console.log(typeof(String(null)));//transformation null to string 
+console.log(typeof(String(4)));
+//конкатенация
+console.log(typeof(5+''));
+const num = 5;
+console.log("https://vk.com/catalog/" + num);
+//формирование стилей
+const fontSize = 26 + 'px';
 
+//2.to number
+console.log(typeof(+'6'));
 
-let str = "some";
-let strObj = new String(str);
-console.log(typeof(str));//строка
-console.log(typeof(strObj));//объект
+console.log(typeof(parseInt("15px",10)));
 
-console.dir(['1','2','3']);//экземляр прототипа массив 
+let answ = +prompt("Hello", "");
+//3. to boolean
+//null, undefined,0,'' (без пробела), NaN are always false
+//3.1
+let switcher = null;
 
-const soldier = //прототип солдат
-{
-    health : 400,
-    armor: 100,
-    sayHello: function()
-        {console.log('hello');}
-};
-//сразу создаем прототип
-const john= Object.create(soldier);
+if (switcher) //switcher is false
+{console.log('Working...');}
 
-//старая запись
-/*john.__proto__ = soldier; //установка для объекта john прототип soldier
-console.log(john.health);
-john.sayHello();
-*/
-//новая запись
-/*
-const john =
-{
-    health : 100
-};
-Object.setPrototypeOf(john, soldier);*/
-console.log(john.health);
-john.sayHello();
+switcher =1;
+if (switcher) //now switcher is true
+{console.log('Working...');}
+//3.2
+console.log(typeof(Boolean('4')));
+//3.3
+console.log(typeof(!!"4"));
