@@ -63,7 +63,7 @@ addForm.addEventListener('submit',(event)=>
                     {newFilm = `${newFilm.substring(0,22)}...`;}
                 if (favourite)   
                 {
-                    console.log('Добавляем любимый фильм');
+                    console.log('Добавляем любимый фильм ');
                 } 
                 movieDB.movies.push(newFilm);
                 
